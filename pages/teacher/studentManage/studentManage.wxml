@@ -1,0 +1,10 @@
+<!--pages/teacher/studentManage/studentManage.wxml-->
+<view class="cu-load bg-blue {{isLoad?'loading':''}}" wx:if="{{isLoad}}"></view>
+
+<view>
+  <view wx:for="{{course_info}}" wx:key="index" class="hoverView" bindtap="click" data-index="{{index}}">
+    <view style="position:relative;left:50rpx;top: 20rpx;">
+      <view style="font-size:50rpx;">{{item._id}}</view>
+    </view>
+  </view>
+</view>

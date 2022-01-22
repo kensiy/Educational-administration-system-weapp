@@ -1,0 +1,36 @@
+/* pages/login/login.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  margin-top: 80rpx;
+  margin-bottom: 80rpx;
+}
+
+.logo {
+  width: 350rpx;
+  height: 350rpx;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.weui-cells__tips {
+  margin-top: 30rpx;
+}
+
+.login {
+  margin-top: 50rpx;
+}
+
+.weui-footer{
+    color: #888;
+  font-size: 14px;
+}
+ .weui-footer_fixed-bottom{
+    margin-bottom: 0;
+}  

@@ -1,0 +1,20 @@
+<!--pages/me/myInfo/myInfo.wxml-->
+<!-- <view>{{name}}</view>
+<view>{{account}}</view> -->
+<view class='container'>
+  <!-- <block wx:for="{{info}}" wx:key="index">
+    <view class='text-content'>{{item}}</view> 
+  </block> -->
+  <view class='text-content'>
+    <view style="width:600rpx;display: flex;justify-content: space-between;">
+      <view style="display:inline-block;">姓名</view>
+      <view style="display:inline-block;text-align:right;">{{name}}</view>
+    </view>
+  </view>
+  <view class='text-content'>
+    <view style="width:600rpx;display: flex;justify-content: space-between;">
+      <view style="display:inline-block;">{{identity=='student'?'学号':'教工号'}}</view>
+      <view style="display:inline-block;text-align:right;">{{account}}</view>
+    </view>
+  </view>
+</view>

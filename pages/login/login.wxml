@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="header">
+  <image class="logo" src="{{logoUrl}}"></image>
+</view>
+<view>
+  <text style="color:orange;font-weight:800;font-size:40rpx">学生选课管理系统</text>
+</view>
+<view class="container">
+  <form bindsubmit="loginForm">
+    <view class="weui-cell"></view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">账号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" name="accountIn" placeholder="请输入账号" confirm-type="next" />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">密码</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input password class="weui-input" name="passwordIn" placeholder="请输入密码" confirm-type="done" />
+      </view>
+    </view>
+    <view class="weui-cell"></view>
+    <view class="weui-cells__tips textCenter">密码默认为身份证后6位</view>
+    <view class="page__bd_spacing login">
+      <button class="weui-btn" type="primary" formType="submit">登录</button>
+    </view>
+  </form>
+  <view class="page__bd page__bd_spacing">
+    <view class="weui-footer">
+      <view class="weui-footer__text">版权所有 © 2021</view>
+      <view class="weui-footer__text">制作：（第一版）第29组</view>
+    </view>
+  </view>
+</view>

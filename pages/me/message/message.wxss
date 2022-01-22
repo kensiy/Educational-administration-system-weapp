@@ -1,0 +1,4 @@
+/* pages/me/message/message.wxss */
+page{
+  background-color: white;
+}

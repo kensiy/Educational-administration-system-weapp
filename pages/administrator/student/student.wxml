@@ -1,0 +1,90 @@
+<!--pages/administrator/student/student.wxml-->
+<view class="cu-load bg-blue {{isLoad?'loading':''}}" wx:if="{{isLoad}}"></view>
+
+<view class="text-center" style="padding-top: 20rpx;" wx:if="{{!isLoad}}">
+  <button class="cu-btn round bg-red' shadow" style="width: 650rpx;" bindtap="click" data-target="insert" data-index="{{-1}}">添加学生</button>
+</view>
+
+<view>
+  <view wx:for="{{student}}" wx:key="index" class="hoverView">
+    <view style="position:relative;left:50rpx;top: 20rpx;font-size: large;">
+      <view style="font-size: large;">姓名：{{item.name}}</view>
+      <view>学号：{{item.account}}</view>
+    </view>
+    <view class="text-center" style="position: absolute;right: 210rpx;margin-top: -65rpx;">
+      <button class="cu-btn round bg-blue shadow" style="width: 120rpx;" bindtap="click" data-index="{{index}}" data-target="update">修改</button>
+    </view>
+    <view class="text-center" style="position: absolute;right: 60rpx;margin-top: -65rpx;">
+      <button class="cu-btn round bg-red shadow" style="width: 120rpx;" bindtap="click" data-index="{{index}}" data-target="delete">删除</button>
+    </view>
+  </view>
+</view>
+
+<!-- 添加学生 -->
+<view class="cu-modal {{modalName=='insert'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content"><text style="font-weight:600;font-size:35rpx;">添加学生</text></view>
+    </view>
+    <view class="padding-lg cu-form-group">
+      <view class="title">姓名</view>
+      <input placeholder="请输入学生姓名" bindinput="inpu"/>
+    </view>
+    <view class="padding-lg cu-form-group">
+      <view class="title">学号</view>
+      <input placeholder="请输入学生学号" bindinput="inpu2"/>
+    </view>
+    <view class="padding-lg cu-form-group">
+      <view class="title">姓名</view>
+      <input placeholder="请输入学生密码" bindinput="inpu3"/>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub" bindtap="hideModal">取消</view>
+      <view class="action margin-0 flex-sub  solid-left text-green" bindtap="insert">确定</view>
+    </view>
+  </view>
+</view>
+
+<!-- 学生修改 -->
+<view class="cu-modal {{modalName=='update'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content"><text style="font-weight:600;font-size:35rpx;">修改学生信息</text></view>
+    </view>
+    <view class="padding-lg cu-form-group">
+      <view class="title">姓名</view>
+      <input value="{{student[object].name}}" placeholder="请输入学生姓名" bindinput="inpu"/>
+    </view>
+    <view class="padding-lg cu-form-group">
+      <view class="title">学号</view>
+      <input value="{{student[object].account}}" placeholder="请输入学生学号" bindinput="inpu2"/>
+    </view>
+    <view class="padding-lg cu-form-group">
+      <view class="title">姓名</view>
+      <input value="{{student[object].password}}" placeholder="请输入学生密码" bindinput="inpu3"/>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub" bindtap="hideModal">取消</view>
+      <view class="action margin-0 flex-sub  solid-left text-green" bindtap="update">确定</view>
+    </view>
+  </view>
+</view>
+
+<!-- 确认删除 -->
+<view class="cu-modal {{modalName=='delete'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">删除学生</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl" style="font-size: large;">
+      确认删除？
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub text-red solid-left" bindtap="hideModal">取消</view>
+      <view class="action margin-0 flex-sub  solid-left" bindtap="delete">确定</view>
+    </view>
+  </view>
+</view>

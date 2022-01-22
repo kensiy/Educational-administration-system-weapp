@@ -1,0 +1,41 @@
+<!--pages/index/index.wxml-->
+<view style="font-size: large;margin-left: 55rpx;font-weight: bold;">通知公告</view>
+<!-- <view style="width: 640rpx;height: 2rpx;margin-left: 55rpx; background-color: grey;"></view> -->
+
+<image style="margin-top:20rpx;width:640rpx;height:300rpx;left:55rpx;border-radius: 20rpx;" src='https://s2.loli.net/2021/12/16/LY35SEJib71QoPn.png'></image>
+
+<view style="font-size: large;margin-left: 55rpx;margin-top: 100rpx;font-weight: bold;">我的功能</view>
+<!-- <view style="width: 640rpx;height: 2rpx;margin-left: 55rpx; background-color: grey;"></view> -->
+
+<scroll-view scroll-y style="margin-top: 20rpx;" wx:if="{{identity=='student'}}">
+  <view class="nav-list">
+    <navigator open-type="navigate" hover-class="none" wx:for="{{elements}}" wx:key="index" url="{{item.path}}" class="nav-li bg-{{item.color}}">
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class="cuIcon-{{item.icon}}"></text>
+    </navigator>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>
+
+<scroll-view scroll-y style="margin-top: 20rpx;" wx:if="{{identity=='teacher'}}">
+  <view class="nav-list">
+    <navigator open-type="navigate" hover-class="none" wx:for="{{elements2}}" wx:key="index" url="{{item.path}}" class="nav-li bg-{{item.color}}">
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class="cuIcon-{{item.icon}}"></text>
+    </navigator>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>
+
+<scroll-view scroll-y style="margin-top: 20rpx;" wx:if="{{identity=='administrator'}}">
+  <view class="nav-list">
+    <navigator open-type="navigate" hover-class="none" wx:for="{{elements3}}" wx:key="index" url="{{item.path}}" class="nav-li bg-{{item.color}}">
+      <view class="nav-title">{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class="cuIcon-{{item.icon}}"></text>
+    </navigator>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

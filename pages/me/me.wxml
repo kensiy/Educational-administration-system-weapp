@@ -1,0 +1,56 @@
+<!--pages/my/my.wxml-->
+<!-- <text>pages/my/my.wxml</text> -->
+<view style="height: 320rpx;">
+  <view>
+    <view class="container"></view>
+    <open-data type="userAvatarUrl" class="img"></open-data>
+    <open-data type="userNickName" class="text1" lang="zh_CN" style="font-size:35rpx"></open-data>
+    <text class="text2" style="font-size:33rpx">欢迎来到小程序~</text>
+    <view class="cu-tag bg-{{tag.color}} text3">{{tag.identity}}</view>
+  </view>
+</view>
+
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl radius">
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/me/myInfo/myInfo" hover-class="none">
+      <text class="cuIcon-formfill text-green"></text>
+      <text class="text-black" style="font-weight:600;">个人信息</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class="content" url="/pages/me/message/message" hover-class="none">
+      <text class="cuIcon-messagefill text-cyan"></text>
+      <text class="text-black" style="font-weight:600;">消息管理</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow" bindtap="scanCode">
+    <view class="content" hover-class="none">
+      <text class="cuIcon-scan text-red"></text>
+      <text class="text-black" style="font-weight:600;">扫一扫</text>
+    </view>
+  </view>
+  <!-- <view >
+  <button  style="text-align: left;width:100%">
+    <navigator class="content" hover-class="none">
+      <text class="cuIcon-scan text-red"></text>
+      <text class="text-black" style="font-weight: 500;">扫一扫</text>
+    </navigator>
+  </button></view> -->
+  <button class="cu-item arrow" open-type="feedback" style="width: 100%;text-align: left;">
+    <navigator class="content" url="/pages/home/complaint/complaint" hover-class="none">
+      <text class="cuIcon-writefill text-brown"></text>
+      <text class="text-black" style="font-weight: 600;">意见反馈</text>
+    </navigator>
+  </button>
+</view>
+
+<view style="padding-left: 35rpx;">
+  <button class="cu-btn bg-red margin-tb-sm lg" style="width: 680rpx;" bindtap="logOut">
+    <text style="font-weight: 400;">注销登录</text></button>
+</view>
+
+<!-- <view class="padding-sm flex flex-wrap"> -->
+<!-- <view class="padding-xs"> -->
+<!-- <view class="cu-tag bg-red">颜色</view> -->
+<!-- </view> -->
+<!-- </view> -->

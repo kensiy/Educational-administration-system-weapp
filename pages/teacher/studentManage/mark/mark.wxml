@@ -1,0 +1,34 @@
+<!--pages/teacher/studentManage/mark/mark.wxml-->
+<view wx:if="{{student.length==0}}">暂无更多信息</view>
+
+<view>
+  <view wx:for="{{student}}" wx:key="index" class="hoverView">
+    <image src="/images/people.png" style="position:relative;left:50rpx;top:50rpx;width: 100rpx;height:100rpx"></image>
+    <view style="position:relative;left:200rpx;top: -70rpx;">
+      <view style="font-size:45rpx;">{{item}}</view>
+      <view style="font-size: 35rpx;">学号：{{num[index]}}</view>
+    </view>
+
+    <view class="text-center" style="position: absolute;right: 60rpx;margin-top: -155rpx;">
+      <button class="cu-btn round bg-red shadow" style="width: 120rpx;" bindtap="click" data-index="{{index}}" data-target="DialogModal2">打分</button>
+    </view>
+
+    <view style="position: absolute;right: 200rpx;margin-top: -147rpx;font-size: 35rpx;color: red;">{{newScore[index]?newScore[index]:''}}</view>
+  </view>
+</view>
+
+<!-- 打分 -->
+<view class="cu-modal {{modalName=='DialogModal2'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content"><text style="font-weight:600;font-size:35rpx;">打分</text></view>
+    </view>
+    <view class="padding-lg">
+      <input placeholder="请输入成绩" bindinput="inpu"/>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub" bindtap="hideModal">取消</view>
+      <view class="action margin-0 flex-sub  solid-left text-green" bindtap="getmark">确定</view>
+    </view>
+  </view>
+</view>

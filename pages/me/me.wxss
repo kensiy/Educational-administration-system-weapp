@@ -1,0 +1,40 @@
+/* pages/my/my.wxss */
+.container {
+	background-color: white;
+	position: relative;
+	top: 20rpx;
+	left: 35rpx;
+	width: 680rpx;
+	height: 300rpx;
+	/* background-color: red; */
+	box-shadow: 0 0 20rpx rgb(150, 150, 150);
+	border-radius: 15rpx;
+}
+
+.img {
+	border-radius: 50%;
+	position: absolute;
+	height: 150rpx;
+	width: 150rpx;
+	overflow: hidden;
+	top: 90rpx;
+	left: 130rpx;
+}
+
+.text1 {
+	position: absolute;
+	top: 140rpx;
+	left: 350rpx;
+}
+
+.text2 {
+	position: absolute;
+	top: 190rpx;
+	left: 350rpx;
+}
+
+.text3 {
+	position: absolute;
+	top: 90rpx;
+	left: 350rpx;
+}

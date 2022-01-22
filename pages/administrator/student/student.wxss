@@ -1,0 +1,9 @@
+/* pages/administrator/student/student.wxss */
+.hoverView{
+  background-color: white;
+  height: 160rpx;
+  width: 700rpx;
+  margin-top: 30rpx;
+  margin-left: 25rpx;
+  border-radius: 20rpx;
+}

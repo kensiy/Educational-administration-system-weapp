@@ -1,0 +1,12 @@
+<!--pages/index/Score/Score.wxml-->
+<view class="cu-load bg-blue {{isLoad?'loading':''}}" wx:if="{{isLoad}}"></view>
+
+<view>
+  <view wx:for="{{score}}" wx:key="index" class="hoverView">
+    <view style="position:relative;left:50rpx;top: 40rpx;">
+      <view style="font-size: large;">课程名称：{{item.course}}</view>
+      <view style="color: grey;">教师：{{item.teacher}}<text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>学分：{{item.credit}}</view>
+    </view>
+    <view style="position:absolute;right:80rpx;font-size: 60rpx;font-weight:bold;margin-top: -50rpx;">{{item.score}}</view>
+  </view>
+</view>

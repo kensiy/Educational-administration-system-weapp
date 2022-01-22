@@ -1,0 +1,13 @@
+<!--pages/index/myClass/myClass.wxml-->
+<view class="cu-load bg-blue {{isLoad?'loading':''}}" wx:if="{{isLoad}}"></view>
+
+<view>
+  <view wx:for="{{course_info}}" wx:key="index" class="hoverView">
+    <view style="position:relative;left:50rpx;top: 20rpx;font-size: large;">
+      <view>课程名称：{{item._id}}</view>
+      <view>授课教师：{{item.teacher}}</view>
+      <view>课程性质：{{item.nature}}</view>
+      <view>课程学分：{{item.credit}}</view>
+    </view>
+  </view>
+</view>
